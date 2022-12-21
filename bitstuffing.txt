@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<string.h>
+#include<conio.h>
+void main()
+{
+int i=0,count=0,n=0;
+char databits[80];
+printf("enter databits:");
+scanf("%s",databits);
+printf("\n data bits after bit stuffing:");
+n=strlen(databits);
+for(i=0;i<n;i++)
+{
+if(databits[i]=='1')
+count++;
+else
+count=0;
+printf("%c",databits[i]);
+if(count==5)
+{
+printf("0");
+count=0;
+}
+}
+getch();
+}
